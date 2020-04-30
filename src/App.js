@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { Provider } from 'react-redux';
-import store from './store';
+import React, { Component } from 'react'
+import { Provider } from 'react-redux'
+import store from './store'
 
-import TodoList from './TodoList';
+import TodoList from './TodoList'
 
 class App extends Component {
   render() {
@@ -13,8 +13,8 @@ class App extends Component {
           <TodoList />
         </div>
       </Provider>
-    );
+    )
   }
 }
 
-export default App;
+export default App

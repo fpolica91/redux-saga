@@ -1,6 +1,5 @@
 export function requestTodoList(text) {
-    return {
-      type: 'REQUEST_TODO_LIST',
-    }
+  return {
+    type: 'REQUEST_TODO_LIST',
   }
-  
+}

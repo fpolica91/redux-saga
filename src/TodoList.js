@@ -1,27 +1,27 @@
-import React from 'react';
+import React from 'react'
 
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
-import * as TodoActions from './store/actions';
+import * as TodoActions from './store/actions'
 
 const TodoList = ({ todos, requestTodoList }) => (
   <div>
     <ul>
-      { todos.data.map(todo => (
+      {todos.data.map((todo) => (
         <li key={todo.id}>{todo.text}</li>
-      )) }
+      ))}
     </ul>
-    <button onClick={() => requestTodoList()}>Load Todos</button>
-    { todos.loading && <p>Loading...</p> }
+    <button onClick={() => requestTodoList()}>Carregar todos</button>
+    {todos.loading && <p>Carregando...</p>}
   </div>
-);
+)
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   todos: state.todos,
-});
+})
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(TodoActions, dispatch);
+const mapDispatchToProps = (dispatch) =>
+  bindActionCreators(TodoActions, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
+export default connect(mapStateToProps, mapDispatchToProps)(TodoList)
